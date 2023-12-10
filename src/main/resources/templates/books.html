@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h2>Список книг</h2>
+    <table th:each="book : ${books}">
+        <tr>
+            <td th:text="${book.book_id}"/>
+            <td th:text="${book.title}"/>
+            <td th:text="${book.description}"/>
+            <td th:text="${book.price}"/>
+        </tr>
+    </table>
+</body>
+</html>
